@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flamarion Amaral</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Topo com imagem e formulário -->
+  <section class="hero">
+    <div class="hero-content">
+     
+      <form class="form" onsubmit="return enviarEmail();">
+        <input type="email" id="email" placeholder="Digite seu e-mail" required />
+        <button type="submit">Inscrever-se</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Menu de navegação com logo -->
+  <header class="header">
+    <div class="logo-container">
+      <img src="imagens/logos/01.svg" alt="Logo" class="logo-img" />
+      
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Propostas</a></li>
+        <li><a href="#">Biografia</a></li>
+        <li><a href="#">Doar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="video-section">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="videos/brasil.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo em HTML5.
+  </video>
+  <div class="video-overlay">
+    <img src="imagens/logos/campanha.png" alt="Logo da Campanha" class="video-logo" />
+  </div>
+</section>
+
+<section class="about-section">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>Sobre Flamarion Amaral</h2>
+      <p>
+        Flamarion Amaral é mais do que um vereador — é um líder forjado na luta pelo povo. Enfermeiro de formação, foi secretário de saúde e transformou a gestão pública com seriedade, coragem e resultados. Filho do Maranhão e irmão do prefeito Rildo Amaral, carrega no sangue o compromisso com a justiça social e o desenvolvimento da nossa terra.
+      </p>
+      <p>
+        Com o olhar firme no futuro e os pés fincados na realidade do povo, Flamarion se lança como pré-candidato a deputado federal para ser a voz da Região Tocantina em Brasília. Sua missão é clara: levar mais recursos, respeito e representatividade para quem sempre foi deixado de lado.
+      </p>
+      <strong>É tempo de coragem. É tempo de ação.</strong><br>
+<strong>É tempo de Flamarion Amaral.</strong>
+    </div>
+    <div class="about-image">
+      <img src="imagens/pessoas/fernando.png" alt="Fernando Manholér" />
+    </div>
+  </div>
+</section>
+
+
+
+<section class="priorities-section fade-in-section">
+  <h2>Prioridades de Flamarion Amaral</h2>
+  <div class="priorities-container">
+    <div class="priority-card">
+      <div class="icon-circle">🎓</div>
+      <h3>Educação de Qualidade</h3>
+      <p>Ensino básico, técnico e superior com foco em inclusão e inovação.</p>
+    </div>
+    <div class="priority-card">
+      <div class="icon-circle">🏥</div>
+      <h3>Saúde Humanizada</h3>
+      <p>Sistema eficiente, com mais prevenção, estrutura e dignidade.</p>
+    </div>
+    <div class="priority-card">
+      <div class="icon-circle">💼</div>
+      <h3>Emprego e Renda</h3>
+      <p>Incentivo à economia local, empreendedorismo e qualificação.</p>
+    </div>
+    <div class="priority-card">
+      <div class="icon-circle">🌱</div>
+      <h3>Sustentabilidade</h3>
+      <p>Desenvolvimento com respeito ao meio ambiente e às futuras gerações.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="news-section fade-in-section">
+  <div class="news-header">
+    <h2>Últimas Notícias</h2>
+    <p>Acompanhe as caravanas, encontros e ações de Flamarion Amaral</p>
+  </div>
+
+  <div class="news-grid">
+    <div class="news-card">
+      <img src="imagens/materias/01.jpg" alt="Caravana no Norte">
+      <div class="news-content">
+        <h3>Caravana pelo Maranhão</h3>
+        <p>Flamarion Amaral visita comunidades na região discutindo educação e infraestrutura.</p>
+        <a href="#">Ler mais</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="imagens/materias/02.jpg" alt="Reunião com lideranças da indústria">
+      <div class="news-content">
+        <h3>Reunião com o setor industrial</h3>
+        <p>Encontro com empresários para debater propostas econômicas e geração de empregos.</p>
+        <a href="#">Ler mais</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="imagens/materias/03.jpg" alt="Evento em universidade pública">
+      <div class="news-content">
+        <h3>Encontro em universidade pública</h3>
+        <p>Debate com jovens universitários sobre tecnologia, inovação e futuro do ensino público.</p>
+        <a href="#">Ler mais</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="gallery-section fade-in-section">
+  <h2>Galeria de Fotos</h2>
+  <div class="gallery-slider">
+    <button class="gallery-btn prev" onclick="moveSlide(-1)">‹</button>
+    <div class="gallery-track" id="gallery-track">
+      <img src="imagens/galeria-fotos/a.jpeg" alt="Evento 1">
+      <img src="imagens/galeria-fotos/b.jpg" alt="Evento 2">
+      <img src="imagens/galeria-fotos/c.jpg" alt="Evento 3">
+      <img src="imagens/galeria-fotos/d.jpg" alt="Evento 4">
+    </div>
+    <button class="gallery-btn next" onclick="moveSlide(1)">›</button>
+  </div>
+</section>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<section class="informativos-section fade-in-section">
+  <h2>Informativos Disponíveis</h2>
+  <div class="informativos-grid">
+    <div class="informativo-card">
+      <img src="informativos/capas/a.png" alt="Capa Informativo 1">
+      <h3>Questão de Soberania</h3>
+      <a href="informativos/pdf/01.pdf" target="_blank" class="btn-ler">Ler</a>
+    </div>
+
+    <div class="informativo-card">
+      <img src="informativos/capas/b.png" alt="Capa Informativo 2">
+      <h3>Camareiras - Mulheres Invisíveis</h3>
+      <a href="informativos/pdf/02.pdf" target="_blank" class="btn-ler">Ler</a>
+    </div>
+
+    <div class="informativo-card">
+      <img src="informativos/capas/c.png" alt="Capa Informativo 3">
+      <h3>Moda no Século XXI</h3>
+      <a href="informativos/pdf/03.pdf" target="_blank" class="btn-ler">Ler</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="doacao-section2">
+  <img src="imagens/logos/campanha.png" alt="Logo Campanha" class="logo2" />
+
+  <div class="conteudo-doacao2">
+    <img src="imagens/pessoas/dois.png" alt="Imagem Campanha" class="imagem-campanha2" />
+
+    <div class="texto-e-botao2">
+      <h2>Ajude a construir um novo Brasil</h2>
+      <p>Sua contribuição fortalece nossa luta por um país mais justo, unido e com oportunidades para todos.</p>
+      <button id="btnDoar2">Doar Agora</button>
+    </div>
+  </div>
+
+  <div id="popupDoacao2" class="popup2">
+    <div class="popup-conteudo2">
+      <h3>Faça sua doação via Pix</h3>
+      <img src="imagens/01.png" alt="QR Code Pix" class="qrcode2" />
+      <p id="chavePix2">chavepix@campanha.com</p>
+      <button onclick="copiarChavePix2()">Copiar chave Pix</button>
+      <button onclick="fecharPopup2()">Fechar</button>
+    </div>
+  </div>
+
+  <div id="mensagemAgradecimento2" class="mensagem2">
+    <p>Obrigado pela sua doação! 💙</p>
+  </div>
+
+  <audio id="somConfirmacao2" src="confirmacao.mp3" preload="auto"></audio>
+</section>
+
+<footer class="footer-campanha2">
+  <div class="footer-conteudo2">
+    <p><strong>Flamarion Amaral 2026</strong></p>
+    <p>CNPJ: 12.345.678/0001-99</p>
+    <p>Campanha registrada conforme legislação eleitoral. As doações estão limitadas aos critérios da Justiça Eleitoral.</p>
+    <p>Endereço: Av. da Democracia, 123 - Brasília/DF</p>
+    <p>Email: contato@flamarion2026.com.br</p>
+  </div>
+</footer>
